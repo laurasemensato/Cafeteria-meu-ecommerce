@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Loja Virtual</title>
+</head>
+<body>
+
+  <!-- TOPO DA LOJA -->
+  <header>
+    <div class="logo">
+      <h1>Fashion Look</h1>
+    </div>
+    <input type="search" placeholder="O que você procura hoje?"> 🔎
+    <div class="carrinho">🛒 (0)</div>
+  </header>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <nav>
+    <ul>
+      <li><a href="#">Lançamentos</a></li>
+      <li><a href="#">Roupas</a></li>
+      <li><a href="#">Calçados</a></li>
+      <li><a href="#">Promoções</a></li>
+    </ul>
+  </nav>
+
+  <!-- CORPO PRINCIPAL -->
+  <main>
+
+    <!-- PAINEL LATERAL (FILTROS) -->
+    <aside>
+      <h2>Filtrar Por</h2>
+      <form>
+        <fieldset>
+          <legend>Tamanho</legend>
+          <label><input type="checkbox" name="tamanho" value="p"> P</label>
+          <label><input type="checkbox" name="tamanho" value="m"> M</label>
+          <label><input type="checkbox" name="tamanho" value="g"> G</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preço</legend>
+          <label><input type="radio" name="preco" value="100"> Até R$ 100</label>
+          <label><input type="radio" name="preco" value="200"> Até R$ 200</label>
+        </fieldset>
+      </form>
+    </aside>
+
+    <!-- ÁREA DOS PRODUTOS -->
+    <section class="vitrine">
+      <h2>Destaques da Semana</h2>
+      
+      <!-- Cada produto individual pode usar a tag <article> -->
+      <article class="card-produto">
+         <img src = "blusa.jpeg" alt="Blusa">
+        <h3>Camiseta Algodão</h3>
+        <p>R$ 89,90</p>
+        <button>Comprar</button>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 Minha Loja Virtual. Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="#">Atendimento</a></li>
+      <li><a href="#">Trocas e Devoluções</a></li>
+      <li><a href="#">Política de Privacidade</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

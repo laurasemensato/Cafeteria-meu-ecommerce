@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras | Café & Aconchego</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho Unificado -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">☕</span>
+        <div>
+          <h1>Café & <span>Aconchego</span></h1>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produto.html">Produto</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="carrinho.html" class="active nav-cart-link" title="Carrinho de Compras" aria-label="Carrinho de Compras">🛒</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+
+    <!-- Trilha de Navegação (Breadcrumb) -->
+    <nav class="breadcrumb" aria-label="Trilha de Navegação">
+      <a href="index.html">Início</a>
+      <span>&gt;</span>
+      <strong>Carrinho de Compras</strong>
+    </nav>
+
+    <!-- Layout do Carrinho: Tabela de Itens + Card Resumo -->
+    <div class="cart-layout">
+
+      <!-- Tabela Semântica Completa de Itens -->
+      <section class="cart-table-wrapper">
+        <table class="cart-table">
+          <caption>Itens Selecionados no seu Pedido</caption>
+          <thead>
+            <tr>
+              <th scope="col">Produto</th>
+              <th scope="col" class="text-center">Preço Unitário</th>
+              <th scope="col" class="text-center">Quantidade</th>
+              <th scope="col" class="text-right">Subtotal</th>
+              <th scope="col" class="text-center">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Produto 1 -->
+            <tr>
+              <td>
+                <div class="cart-product-info">
+                  <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=128&q=80" alt="Latte Macchiato Rosa" class="cart-thumb">
+                  <div>
+                    <div class="cart-product-title">Latte Macchiato Rosa Aveludado</div>
+                    <div class="cart-product-category">Bebida Especial / 350ml</div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">R$ 18,90</td>
+              <td class="text-center">
+                <input type="number" min="1" value="2" class="cart-qty-input" aria-label="Quantidade de Latte Macchiato">
+              </td>
+              <td class="text-right"><strong>R$ 37,80</strong></td>
+              <td class="text-center">
+                <button type="button" class="btn-remove" title="Remover item do carrinho" aria-label="Remover Latte Macchiato">🗑️</button>
+              </td>
+            </tr>
+
+            <!-- Produto 2 -->
+            <tr>
+              <td>
+                <div class="cart-product-info">
+                  <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=128&q=80" alt="Donut Glaceado Rosa" class="cart-thumb">
+                  <div>
+                    <div class="cart-product-title">Donut Glaceado Rosa Bebê</div>
+                    <div class="cart-product-category">Confeitaria Artesanal</div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">R$ 11,00</td>
+              <td class="text-center">
+                <input type="number" min="1" value="1" class="cart-qty-input" aria-label="Quantidade de Donut Glaceado">
+              </td>
+              <td class="text-right"><strong>R$ 11,00</strong></td>
+              <td class="text-center">
+                <button type="button" class="btn-remove" title="Remover item do carrinho" aria-label="Remover Donut Glaceado">🗑️</button>
+              </td>
+            </tr>
+
+            <!-- Produto 3 -->
+            <tr>
+              <td>
+                <div class="cart-product-info">
+                  <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=128&q=80" alt="Prensa Francesa Rose" class="cart-thumb">
+                  <div>
+                    <div class="cart-product-title">Cafeteira Prensa Francesa Rose Gold</div>
+                    <div class="cart-product-category">Acessório Barista</div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">R$ 89,90</td>
+              <td class="text-center">
+                <input type="number" min="1" value="1" class="cart-qty-input" aria-label="Quantidade de Cafeteira Prensa Francesa">
+              </td>
+              <td class="text-right"><strong>R$ 89,90</strong></td>
+              <td class="text-center">
+                <button type="button" class="btn-remove" title="Remover item do carrinho" aria-label="Remover Prensa Francesa">🗑️</button>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- Rodapé da Tabela com colspan obrigatório -->
+          <tfoot>
+            <tr>
+              <td colspan="5">
+                <div class="free-shipping-notice">
+                  <span>✨ <strong>Parabéns!</strong> Seu pedido atingiu o valor mínimo e você ganhou <strong>Frete Grátis</strong> para todo o Brasil!</span>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Card Lateral de Resumo do Pedido -->
+      <aside class="order-summary" aria-label="Resumo do Pedido">
+        <h2>Resumo do Pedido</h2>
+        
+        <div class="summary-row">
+          <span>Subtotal dos Itens:</span>
+          <strong>R$ 138,70</strong>
+        </div>
+
+        <div class="summary-row">
+          <span>Valor do Frete:</span>
+          <strong style="color: #3b7e46;">GRÁTIS</strong>
+        </div>
+
+        <!-- Campo para Cupom de Desconto -->
+        <div class="coupon-box">
+          <input type="text" placeholder="Cupom de Desconto" aria-label="Código do cupom de desconto">
+          <button type="button" class="btn-coupon">Aplicar</button>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Valor Total:</span>
+          <span style="color: var(--pink-accent);">R$ 138,70</span>
+        </div>
+
+        <!-- Botão de Destaque Obrigatório -->
+        <a href="cadastro.html" class="btn-checkout">Finalizar Compra &rarr;</a>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Rodapé Unificado -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Café & Aconchego</h4>
+        <p>Sua cafeteria favorita com cafés especiais, confeitos delicados e momentos quentinhos todos os dias.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação Rápida</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produto.html">Produto em Destaque</a></li>
+          <li><a href="carrinho.html">Carrinho de Compras</a></li>
+          <li><a href="cadastro.html">Cadastro / Checkout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horário de Atendimento</h4>
+        <p>Segunda a Sábado: 07h30 às 20h00<br>Domingos e Feriados: 08h30 às 18h00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <p>Rua dos Grãos Floridos, 123 - Centro<br>contato@cafeaconchego.com.br<br>(11) 98765-4321</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Café & Aconchego - Todos os direitos reservados. Projeto Prático de Frontend.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
