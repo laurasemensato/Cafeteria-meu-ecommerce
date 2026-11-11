@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho Unificado -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">☕</span>
+        <div>
+          <h1>Café & <span>Aconchego</span></h1>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produto.html" class="active">Produto</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="carrinho.html" class="nav-cart-link" title="Carrinho de Compras" aria-label="Carrinho de Compras">🛒</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+
+    <!-- Trilha de Navegação (Breadcrumb) -->
+    <nav class="breadcrumb" aria-label="Trilha de Navegação">
+      <a href="index.html">Início</a>
+      <span>&gt;</span>
+      <a href="index.html">Bebidas Quentes</a>
+      <span>&gt;</span>
+      <strong>Doces e muito mais!</strong>
+    </nav>
+
+    <!-- Layout de Duas Colunas (Galeria e Informações) -->
+    <section class="product-detail-layout">
+
+      <!-- Coluna da Esquerda: Galeria de Imagens -->
+      <div class="gallery-column">
+        <div class="main-image-container">
+          <img id="main-product-img" src="cappuccinopistache.jpg" alt="">
+        </div>
+        
+        <!-- 4 miniaturas (thumbnails) com hover destacado -->
+        <div class="thumbnails-row">
+          <div class="thumb-item active" onclick="document.getElementById('main-product-img').src='https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80'">
+            <img src="cappuccinopistache.jpg" alt="Cappuccino de pistache">
+          </div>
+          <div class="thumb-item" onclick="document.getElementById('main-product-img').src='https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80'">
+            <img src="cookies2.jpg" alt="Cookies Twix">
+          </div>
+          <div class="thumb-item" onclick="document.getElementById('main-product-img').src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80'">
+            <img src="donuts.jpg" alt="Donuts Kitkat e morango">
+          </div>
+          <div class="thumb-item" onclick="document.getElementById('main-product-img').src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80'">
+            <img src="cafe.jpg" alt="Café tradicional fresco">
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna da Direita: Informações de Compra -->
+      <div class="info-column">
+        <h2>Cappuccino de pistache</h2>
+
+        <!-- Avaliação em Estrelas -->
+        <div class="rating-box">
+          <span class="stars" role= "img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</span>
+          <span class="reviews-count">(48 avaliações de clientes apaixonados)</span>
+        </div>
+
+        <!-- Preço Antigo e Atual -->
+        <div class="pricing-area">
+          <div class="price-old">De R$ 24,90</div>
+          <div class="price-current">R$ 18,90</div>
+          <div class="installments">ou em até 2x de R$ 9,45 sem juros</div>
+        </div>
+
+        <p class="product-description-brief">
+          Nossa bebida assinatura! Elaborada com sorvete misturdo com cappuccino, creme de pistache e um toque sutil de favas de castanha.
+        </p>
+
+        <!-- Seletor de Opções (Tamanho usando <select>) -->
+        <div class="selector-group">
+          <label for="select-tamanho">Tamanho da Xícara / Copo:</label>
+          <select id="select-tamanho" name="tamanho" class="select-styled">
+            <option value="p">Pequeno (200ml) - Tradicional</option>
+            <option value="m" selected>Médio (350ml) - Mais pedido (+ R$ 3,00)</option>
+            <option value="g">Grande (480ml) - Generoso (+ R$ 6,00)</option>
+          </select>
+        </div>
+
+        <!-- Seletor com botões de rádio estilizados (Tipo de Leite) -->
+        <div class="selector-group">
+          <label id="tipo-leite-label">Opção de Leite:</label>
+          <div class="radio-options-row" role="radiogroup" aria-labelledby="tipo-leite-label">
+            <div class="radio-pill">
+              <input type="radio" id="leite-integral" name="tipo_leite" value="integral" checked>
+              <label for="leite-integral">Leite Integral A</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" id="leite-aveia" name="tipo_leite" value="aveia">
+              <label for="leite-aveia">Leite de Aveia (Vegano)</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" id="leite-amendoas" name="tipo_leite" value="amendoas">
+              <label for="leite-amendoas">Leite de Amêndoas</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão Principal Obrigatório -->
+        <div class="action-buttons-wrap">
+          <a href="carrinho.html" class="btn-add-cart">
+            <span>🛒 Adicionar ao Carrinho</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Tabela Semântica de Especificações Técnicas (Efeito Zebrado :nth-child(even)) -->
+    <section class="specs-section">
+      <h2>Especificações Técnicas e Ingredientes</h2>
+      <table class="table-specs">
+        <caption>Ficha Técnica Oficial do Produto</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Marca / Origem</th>
+            <td>Café & Aconchego - Grãos de Minas e especializados em qualidade</td>
+          </tr>
+          <tr>
+            <th scope="row">Peso Líquido / Volume</th>
+            <td>350 ml (porção média padrão)</td>
+          </tr>
+          <tr>
+            <th scope="row">Dimensões da Xícara</th>
+            <td>10 cm de diâmetro x 12 cm de altura (Cerâmica artesanal vitrificada)</td>
+          </tr>
+          <tr>
+            <th scope="row">Garantia e Conservação</th>
+            <td>Consumo imediato recomendado ou até 20 minutos após preparo</td>
+          </tr>
+          <tr>
+            <th scope="row">Material & Ingredientes</th>
+            <td>Grãos Arábica Bourbon Amarelo, leite vaporizado, sorvete e doces da melhor qualidade</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Unificado -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Café & Aconchego</h3>
+        <p>Sua cafeteria favorita com cafés especiais, confeitos delicados e momentos quentinhos todos os dias.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegação Rápida</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produto.html">Produto em Destaque</a></li>
+          <li><a href="carrinho.html">Carrinho de Compras</a></li>
+          <li><a href="cadastro.html">Cadastro / Checkout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Horário de Atendimento</h3>
+        <p>Segunda a Sábado: 07h30 às 20h00<br>Domingos e Feriados: 08h30 às 18h00</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contato & Localização</h3>
+        <p>Rua dos Grãos Floridos, 123 - Centro<br>contato@cafeaconchego.com.br<br>(11) 98765-4321</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Café & Aconchego - Todos os direitos reservados. Projeto Prático de Frontend.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café & Aconchego | Cafeteria Artesanal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho Unificado -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon">☕</span>
+        <div>
+          <h1>Café & <span>Aconchego</span></h1>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="produto.html">Produto</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="carrinho.html" class="nav-cart-link" title="Carrinho de Compras" aria-label="Carrinho de Compras">🛒</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <!-- Barra de Rolagem Horizontal de Imagens -->
+    <div class="scroll-gallery-section">
+      <div class="scroll-gallery-container">
+        <div class="scroll-gallery-track">
+          <div class="scroll-gallery-item">
+            <img src="acessorio.jpg" alt="Xícaras de cerâmica artesanal e café fresco">
+            <span class="scroll-item-caption">Cerâmicas & Xícaras Artesanais</span>
+          </div>
+          <div class="scroll-gallery-item">
+            <img src="cafes.jpg" alt="Cappuccinos com canela e grãos torrados">
+            <span class="scroll-item-caption">Preparo Cuidadoso & Espresso Cremoso</span>
+          </div>
+          <div class="scroll-gallery-item">
+            <img src="ambiente.jpg" alt="Ambiente acolhedor e aconchegante da cafeteria">
+            <span class="scroll-item-caption">O Conforto do Nosso Salão</span>
+          </div>
+          <div class="scroll-gallery-item">
+            <img src="cookies.jpg" alt="Doces e Donuts artesanais frescos">
+            <span class="scroll-item-caption">Doces, Tortas e Confeitaria Fina</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categorias em Destaque -->
+    <section class="categories-section">
+      <h2 class="categories-title">Categorias em Destaque</h2>
+      <div class="categories-row">
+        <a href="produto.html" class="category-item">
+          <div class="category-circle">
+            <img src="cappuccinopistache.jpg" alt="Lançamentos">
+          </div>
+          <span class="category-name">Lançamentos</span>
+        </a>
+        <a href="produto.html" class="category-item">
+          <div class="category-circle">
+            <img src="cappucino.jpg" alt="Ofertas">
+          </div>
+          <span class="category-name">Ofertas</span>
+        </a>
+        <a href="produto.html" class="category-item">
+          <div class="category-circle">
+            <img src="acessorio.jpg" alt="Acessórios">
+          </div>
+          <span class="category-name">Acessórios</span>
+        </a>
+        <a href="produto.html" class="category-item">
+          <div class="category-circle">
+            <img src="cookies2.jpg" alt="Mais vendidos">
+          </div>
+          <span class="category-name">Mais vendidos</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <section>
+      <h2 class="section-title">Nossos Queridinhos da Cafeteria</h2>
+      <div class="products-grid">
+        <!-- Produto 1 -->
+        <article class="product-card">
+          <a href="produto.html" class="product-card-link" aria-label="Ver cappuccino de pistache">
+            <img src="cappuccinopistache.jpg" alt="Cappuccino de pistache">
+          </a>
+          <div class="product-card-body">
+            <span class="product-category">Café Especial</span>
+            <h3><a href="produto.html" class="product-title-link">Cappuccino de pistache</a></h3>
+            <p class="desc">Sorvete misturado com cappuccino, com creme de pistache e toque aveludados da castanha.</p>
+            <div class="product-price-box">
+              <span class="price-old">R$ 24,90</span>
+              <span class="price-current">R$ 18,90</span>
+            </div>
+            <div class="card-actions">
+              <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+              <a href="carrinho.html" class="btn-primary">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 2 -->
+        <article class="product-card">
+          <a href="produto.html" class="product-card-link" aria-label="Ver detalhes de Cookies Twix">
+            <img src="cookies3.jpg" alt="Cookies Twix">
+          </a>
+          <div class="product-card-body">
+            <span class="product-category">Cookies deliciosos</span>
+            <h3><a href="produto.html" class="product-title-link">Cookies Twix</a></h3>
+            <p class="desc">A clássica harmonia de twix com cookies</p>
+            <div class="product-price-box">
+              <span class="price-old">R$ 19,00</span>
+              <span class="price-current">R$ 15,50</span>
+            </div>
+            <div class="card-actions">
+              <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+              <a href="carrinho.html" class="btn-primary">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 3 -->
+        <article class="product-card">
+          <a href="produto.html" class="product-card-link" aria-label="Ver detalhes de Donut Glaceado Rosa Bebê e Kit Kat">
+            <img src="donuts.jpg" alt="Donut de Kit Kat e Morango">
+          </a>
+          <div class="product-card-body">
+            <span class="product-category">Confeitaria</span>
+            <h3><a href="produto.html" class="product-title-link">Donut Glaceado Rosa Bebê e KitKat</a></h3>
+            <p class="desc">Massa levinha e fofinha com cobertura de chocolate branco com recheio de morango e outro com recheio de kitkat</p>
+            <div class="product-price-box">
+              <span class="price-old">R$ 27,00</span>
+              <span class="price-current">R$ 17,00</span>
+            </div>
+            <div class="card-actions">
+              <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+              <a href="carrinho.html" class="btn-primary">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 4 -->
+        <article class="product-card">
+          <a href="produto.html" class="product-card-link" aria-label="Ver detalhes de Cafeteira Prensa Francesa Rose">
+            <img src="cafe.jpg" alt="Prensa Francesa e Grãos Selecionados">
+          </a>
+          <div class="product-card-body">
+            <span class="product-category">Café clássico</span>
+            <h3><a href="produto.html" class="product-title-link">Cafeteira Prensa Francesa Rose</a></h3>
+            <p class="desc">Café clássico com cobertura de leite e detalhes de coração</p>
+            <div class="product-price-box">
+              <span class="price-old">R$ 12,00</span>
+              <span class="price-current">R$ 8,90</span>
+            </div>
+            <div class="card-actions">
+              <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+              <a href="carrinho.html" class="btn-primary">Comprar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Unificado -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Café & Aconchego</h4>
+        <p>Sua cafeteria favorita com cafés especiais, confeitos delicados e momentos quentinhos todos os dias.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação Rápida</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produto.html">Produto em Destaque</a></li>
+          <li><a href="carrinho.html">Carrinho de Compras</a></li>
+          <li><a href="cadastro.html">Cadastro / Checkout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horário de Atendimento</h4>
+        <p>Segunda a Sábado: 07h30 às 20h00<br>Domingos e Feriados: 08h30 às 18h00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <p>Rua dos Grãos Floridos, 123 - Centro<br>contato@cafeaconchego.com.br<br>(11) 98765-4321</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Café & Aconchego - Todos os direitos reservados. Projeto Prático de Frontend.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
